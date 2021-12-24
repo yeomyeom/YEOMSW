@@ -1,0 +1,2 @@
+-dontwarn com.nexacro.**
+-keep class com.nexacro.**{ *; }

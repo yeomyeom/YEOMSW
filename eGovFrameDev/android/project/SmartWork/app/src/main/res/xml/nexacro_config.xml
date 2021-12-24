@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nexacro-config>
+
+    <!--    16112801 이후 버전부터 사용가능 -->
+    <!--
+   <application dialog-position="bottom"/>      업데이트 창 위치  default center-->
+    <!--
+    <updator cancelable="false"/>               업데이트 confirm 을 alert으로 변경 -->
+    <!--
+    <updator force="true"/>                     업데이트 alert 없이 강제 업데이트 실행 -->
+    <!--
+    <updator restart="false"/>                  업데이트 후 자동 재실행 -->
+
+    <!--    17090501 이후 버전부터 사용가능 -->
+
+    <updator quiet="false"/>                    <!-- 업데이트 창 실행 금지 -->
+    <!--
+    <application quiet="true"/>                 앱실행 창 실행금지 -->
+</nexacro-config>

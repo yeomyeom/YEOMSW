@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+
+    defaultConfig {
+        applicationId "kr.or.arex.smartwork"
+        minSdkVersion 14
+        targetSdkVersion 27
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-nexa-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-nexa-rules.pro'
+        }
+    }
+
+    aaptOptions{
+        cruncherEnabled = false;
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation 'com.journeyapps:zxing-android-embedded:3.6.0@aar'
+    implementation 'com.android.support:appcompat-v7:27.1.0'
+    implementation 'com.google.zxing:core:3.3.0'
+    api files('libs/nexacro14.jar')
+}

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SmartWork</string>
+
+    <!-- Clipboard -->
+    <string name="copy">복사하기</string>
+    <string name="paste">붙여넣기</string>
+    <string name="cut">잘라내기</string>
+    <string name="selectall">전체선택</string>
+    <string name="selectword">단어선택</string>
+
+    <!-- FileDialog -->
+    <string name="ok">확인</string>
+    <string name="cancel">취소</string>
+    <string name="move">이동</string>
+    <string name="upper">상위</string>
+    <string name="filter">필터</string>
+    <string name="home">홈</string>
+    <string name="nofilename">파일명이 없습니다.</string>
+    <string name="wantreplace">동일한 파일이 이미 존재합니다. 바꾸시겠습니까?</string>
+
+    <!-- Loading -->
+    <string name="needupdate">업데이트가 있습니다. \r\n완료 후 재시작 해 주세요.</string>
+    <string name="loadingFail">초기 로딩이 실패하였습니다. \r\n재시작 해 주세요.</string>
+    <string name="updateFail">업데이트가 실패하였습니다. \r\n재시작 해 주세요.</string>
+    <string name="notexist">구동에 필요한 파일이 없습니다. \r\n재시작 해 주세요.</string>
+    <string name="BeingUpdated">업데이트 중입니다.</string>
+    <string name="checkforupdates">업데이트 확인 중입니다.</string>
+    <string name="installforupdates">업데이트 설치 중입니다.</string>
+    <string name="downloadingforupdates">업데이트 다운 중입니다.</string>
+    <string name="force_close">업데이트가 되었습니다.</string>
+    <string name="LoadingPleaseWait">로딩중입니다.. \r\n잠시만 기다려주세요...</string>
+
+    <!-- Accessibility widget role -->
+    <string name="alert">알림</string>
+    <string name="pushbutton">버튼</string>
+    <string name="combobox">드롭다운 목록</string>
+    <string name="checkbutton">확인 란</string>
+    <string name="radiobutton">라디오 버튼</string>
+    <string name="text">입력창</string>
+    <string name="list">리스트</string>
+    <string name="listitem">리스트아이템</string>
+    <string name="statictext"></string>
+    <string name="graphic">이미지</string>
+    <string name="spacebar">스페이스바</string>
+    <string name="textdeleted">삭제됨</string>
+
+    <!-- Accessibility widget statue -->
+    <string name="checked">선택 됨</string>
+    <string name="unchecked">선택 안됨</string>
+
+    <!-- Accessibility reaction -->
+    <string name="click">클릭</string>
+
+    <!-- Splash message  -->
+    <string name="start_initialize">Start Initialize</string>
+    <string name="check_license">Check License</string>
+    <string name="load_frameworkmodule">Load Framework Module</string>
+    <string name="load_extendmodule">Load Extend Module</string>
+    <string name="execute_frameworkscript">Execute Framework Script</string>
+    <string name="load_application">Load Application</string>
+    <string name="load_failapplication">Load Fail Aplication Initialize. Click And Close</string>
+
+
+    <string name="toast_bt_na">bluetooth is not available</string>
+    <string name="bt_not_enabled_leaving">Bluetooth was not enabled. Leaving Bluetooth print.</string>
+    <string name="connect_fail">Unable to connect device</string>
+    <string name="connect_lost">Device connection was lost</string>
+    <string name="secure_connect">Connect a device - Secure</string>
+    <string name="insecure_connect">Connect a device - Insecure</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="title_paired_devices">Paired Devices</string>
+    <string name="title_other_devices">Other Available Devices</string>
+    <string name="button_scan">Scan for devices</string>
+    <string name="none_paired">No devices have been paired</string>
+    <string name="scanning">scanning for devices....</string>
+    <string name="select_device">select a device to connect</string>
+    <string name="none_found">No devices found</string>
+    <string name="not_connected">You are not connected to a device</string>
+    <string name="warn_timeout">Connection is not available.\nData sending is cancelled.</string>
+
+</resources>

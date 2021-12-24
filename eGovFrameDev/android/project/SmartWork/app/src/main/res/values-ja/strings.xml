@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SmartWork</string>
+    
+    <!-- Clipboard -->
+    <string name="copy">コピー</string>
+    <string name="paste">貼り付け</string>
+    <string name="cut">カット</string>
+    <string name="selectall">全て選択</string>
+    <string name="selectword">単語選択</string>
+    
+    <string name="needupdate">アップデートがあります。\r\n完了した後に, 再起動してください。</string>
+    <string name="loadingFail">初期ロードに失敗しました。\r\n再起動してください。</string>
+    <string name="updateFail">アップデートが失敗しました。\r\n再起動してください。</string>
+    <string name="notexist">起動ファイルがありません。\r\n再起動してください。</string>
+    <string name="BeingUpdated">アップデート中です。</string>
+    <string name="wantreplace">同一のファイル名があります。上書きしますか？</string>
+    <string name="ok">確認</string>
+    <string name="cancel">キャンセル</string>
+    <string name="move">移動</string>
+    <string name="upper">上位</string>
+    <string name="filter">フィルター</string>
+    <string name="home">ホーム</string>
+    <string name="nofilename">ファイル名がありません。</string>    
+    <string name="checkforupdates">アップデート確認中です。</string>     
+    <string name="installforupdates">アップデート設置中です。</string>  
+   	<string name="downloadingforupdates">アップデートダウン中です。</string>    
+   	<string name="force_close">アップデートが完了しました。</string>   
+   	<string name="LoadingPleaseWait">ローディング 。。。\r\nお待ちください。</string> 
+   	
+   	     <!-- Splash message  -->
+    <string name="start_initialize">初期化</string> 
+    <string name="check_license">ライセンスチェック</string>
+    <string name="load_frameworkmodule">フレームワークモジュールのロード</string>
+    <string name="load_extendmodule">拡張モジュールロード</string>
+    <string name="execute_frameworkscript">フレームワークスクリプトの実行</string>
+    <string name="load_application">応用プログラムロード</string>
+    <string name="load_failapplication">ADLファイルロード失敗. クリックすると閉じます</string>
+</resources>
