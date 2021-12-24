@@ -1,0 +1,149 @@
+﻿{
+    "version" : "14.0.0.1",
+    "runtime" :
+    {
+        "target" :
+        {
+            "os" : "android"
+        },
+        "framework" :
+        [
+         "./nexacro14lib/framework/SystemBase.js",
+         "./nexacro14lib/framework/SystemBase_HTML5.js",
+         "./nexacro14lib/framework/SystemBase_Runtime.js",
+         "./nexacro14lib/framework/BasicObjs.js",
+         "./nexacro14lib/framework/ErrorDefine.js",
+         "./nexacro14lib/framework/Platform_HTML5.js",
+         "./nexacro14lib/framework/Platform_Runtime.js",
+         "./nexacro14lib/framework/Platform.js",
+         "./nexacro14lib/framework/CssObjs.js",
+         "./nexacro14lib/framework/Device.js",
+         "./nexacro14lib/framework/Device_Android.js",
+         "./nexacro14lib/framework/Device_iOS.js"
+        ],
+        "component" :
+        [
+         "./nexacro14lib/component/CompBase/Element_HTML5.js",
+         "./nexacro14lib/component/CompBase/Element_Runtime.js",
+         "./nexacro14lib/component/CompBase/CompBase.js",
+         "./nexacro14lib/component/CompBase/CompEventBase.js",
+         "./nexacro14lib/component/CompBase/Data.js",
+         "./nexacro14lib/component/CompBase/EditBase.js",
+         "./nexacro14lib/component/CompBase/FormBase.js",
+         "./nexacro14lib/component/CompBase/TitleBar.js",
+         "./nexacro14lib/component/CompBase/StatusBar.js",
+         "./nexacro14lib/component/CompBase/FrameBase.js",
+         "./nexacro14lib/component/CompBase/ScrollBar.js",
+         "./nexacro14lib/component/CompBase/Step.js",
+         "./nexacro14lib/component/ComComp/Dataset.js",
+         "./nexacro14lib/component/ComComp/DomObject.js",
+         "./nexacro14lib/component/ComComp/Button.js",
+         "./nexacro14lib/component/ComComp/Static.js",
+         "./nexacro14lib/component/ComComp/Edit.js",
+         "./nexacro14lib/component/ComComp/MaskEdit.js",
+         "./nexacro14lib/component/ComComp/TextArea.js",
+         "./nexacro14lib/component/ComComp/ImageViewer.js",
+         "./nexacro14lib/component/ComComp/CheckBox.js",
+         "./nexacro14lib/component/ComComp/Radio.js",
+         "./nexacro14lib/component/ComComp/ListBox.js",
+         "./nexacro14lib/component/ComComp/Combo.js",
+         "./nexacro14lib/component/ComComp/Div.js",
+         "./nexacro14lib/component/ComComp/ProgressBar.js",
+         "./nexacro14lib/component/ComComp/PopupDiv.js",
+         "./nexacro14lib/component/ComComp/Menu.js",
+         "./nexacro14lib/component/ComComp/PopupMenu.js",
+         "./nexacro14lib/component/ComComp/Spin.js",
+         "./nexacro14lib/component/ComComp/DatePicker.js",
+         "./nexacro14lib/component/ComComp/Calendar.js",
+         "./nexacro14lib/component/ComComp/GroupBox.js",
+         "./nexacro14lib/component/ComComp/Tab.js",
+         "./nexacro14lib/component/ComComp/FileDownload.js",
+         "./nexacro14lib/component/ComComp/FileUpload.js",
+         "./nexacro14lib/component/ComComp/FlashPlayer.js",
+         "./nexacro14lib/component/ComComp/MediaPlayer.js",
+         "./nexacro14lib/component/ComComp/WebBrowser.js",
+         "./nexacro14lib/component/ComComp/Map.js",
+         "./nexacro14lib/component/ComComp/Sketch.js",
+         "./nexacro14lib/component/ComComp/ExportObject.js",
+         "./nexacro14lib/component/ComComp/ImportObject.js",
+         "./nexacro14lib/component/ComComp/Tray.js",
+         "./nexacro14lib/component/Grid/GridInfo.js",
+         "./nexacro14lib/component/Grid/Grid.js",
+         "./nexacro14lib/component/DeviceAPI/SQLite.js",
+         "./nexacro14lib/component/DeviceAPI/SQLite_Runtime.js",
+         "./nexacro14lib/component/DeviceAPI/Plugin.js",
+         "./nexacro14lib/component/DeviceAPI/DeviceObjs.js",
+         "./nexacro14lib/component/DeviceAPI/DeviceObjs_Runtime.js",
+         "./nexacro14lib/component/DeviceAPI/XPush.js",
+         "./nexacro14lib/component/DeviceAPI/TCPClientSocket.js",
+         "./nexacro14lib/component/DeviceAPI/Mobile.js",
+         "./nexacro14lib/component/NX/Link.js",
+         "./nexacro14lib/component/NX/NX.js",
+         "./nexacro14lib/component/NX/NX_Form.js",
+         "./nexacro14lib/component/NX/NX_Analyzer.js",
+         "./nexacro14lib/component/NX/NX_Comps.js",
+         "./nexacro14lib/component/NX/NX_Excel.js",
+         "./nexacro14lib/component/NX/NX_File.js",
+         "./nexacro14lib/component/NX/NX_Progressbar.js",
+         "./nexacro14lib/component/NX/NX_Service.js",
+         "./nexacro14lib/component/NX/NX_Validity.js",
+         "./nexacro14lib/component/NX/DatasetEx.js",
+         "./nexacro14lib/component/NX/GridEx.js",
+         "./nexacro14lib/component/NX/Util.js",
+         "./nexacro14lib/component/UbiReport4/UbiReport4.js",
+         "./nexacro14lib/component/UbiReport4/ubiexcanvas.js",
+         "./nexacro14lib/component/UbiReport4/ubihtml.js",
+         "./nexacro14lib/component/UbiReport4/ubinonax.js",
+         "./nexacro14lib/component/UbiReport4/msg.js",
+         "./nexacro14lib/component/rMateChartH5/JS/editablegrid-2.0.1.js",
+         "./nexacro14lib/component/rMateChartH5/JS/excanvas.js",
+         "./nexacro14lib/component/rMateChartH5/JS/jspdf.js",
+         "./nexacro14lib/component/rMateChartH5/JS/rMateIntegrationH5.js",
+         "./nexacro14lib/component/LicenseKey/rMateChartH5License.js",
+         "./nexacro14lib/component/ExtComp/ExtWebEditor.js",
+         "./nexacro14lib/component/ExtComp/ExtFileUpDownload.js",
+         "./nexacro14lib/component/ExtComp/ExtYearCalendar.js",
+         "./nexacro14lib/component/ExtComp/ExtYearPriodCalendar.js",
+         "./nexacro14lib/component/ExtComp/ExtCalendar.js",
+         "./nexacro14lib/component/ExtComp/ExtMonthCalendar.js",
+         "./nexacro14lib/component/Standard/Standard.js",
+         "./archivefiles.js"
+        ],
+        "form" :
+        [
+         "./common/frame/frm_login.xfdl.js",
+         "./common/frame/frm_top.xfdl.js",
+         "./common/frame/frm_tab.xfdl.js",
+         "./common/frame/frm_bottom.xfdl.js"
+        ],
+        "xadl" :
+        {
+          "launch" : "./angs.xadl.js",
+					"quickview" : "./angs.xadl.quickview.js",
+					"filesecurelevel" : 0
+        },
+        "protocol":
+        {
+            "adaptors":
+            [
+          
+            ]
+        },
+        "resource" :
+        {
+            "android" : {
+                "updateurl" : "http://sw.arex.or.kr/angs/",
+                "default" : {
+                    "updateurl" : "",
+                    "default" : {
+                        "updateurl" : "",
+                        "resources" :
+                        [{"type" : "File", "file" : "Archive00.xzip", "targetpath" : "", "version" : "3", "failpass" : "false"},
+                         {"type" : "Theme", "file" : "angs.zip", "targetpath" : "/+theme_", "version" : "2", "failpass" : "false"},
+                         {"type" : "Engine", "file" : "nexacro14lib.zip", "targetpath" : "", "version" : "9", "failpass" : ""}]
+                    }
+                }
+            }
+        }
+    }
+}
