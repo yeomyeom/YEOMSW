@@ -62,18 +62,19 @@ public class Main extends NexacroUpdatorActivity
             if(!online){
                 toast = Toast.makeText(this, "VPN에 연결되어 있지 않습니다.\nVPN 로그인 후 다시 앱을 실행해 주세요.", Toast.LENGTH_LONG);
                 toast.show();
-
                 super.finish();
             }
+            else{
+                try{
+                    Thread.sleep(2000);
+                    toast = Toast.makeText(this, "2022-01-25에 업데이트 된 버전입니다.", Toast.LENGTH_LONG);
+                    toast.show();
+                }catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
 
-        }
-        try{
-            Thread.sleep(2000);
-            toast = Toast.makeText(this, "2021-12-24에 업데이트 된 버전입니다.", Toast.LENGTH_LONG);
-            toast.show();
-        }catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         Intent intent = getIntent();
         if (intent != null) {
             String url = intent.getStringExtra("updateUrl");

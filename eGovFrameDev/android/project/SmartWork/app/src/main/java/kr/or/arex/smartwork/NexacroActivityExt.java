@@ -60,14 +60,7 @@ public class NexacroActivityExt extends NexacroActivity
 	{		//super.onActivityResult(requestCode, resultCode, data);
 
         Log.d(LOG_TAG, "onActivity!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-        Log.d(LOG_TAG, "onActivity!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-        Log.d(LOG_TAG, "111111111111111");
-        Log.d(LOG_TAG, "22222222222222222");
-        Log.d(LOG_TAG, "333333333333333333");
-        Log.d(LOG_TAG, "44444444444444444444");
-        Log.d(LOG_TAG, "55555555555555555555555555");
         Log.d(LOG_TAG, "requestCode :: " + requestCode + "!!!!!!!!!!!!!");
-        Log.d(LOG_TAG, "666666666666666666666666666");
 
         switch(requestCode) {
             case 2:

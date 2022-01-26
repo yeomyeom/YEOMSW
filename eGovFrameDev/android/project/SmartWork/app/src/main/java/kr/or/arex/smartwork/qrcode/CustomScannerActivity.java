@@ -47,7 +47,7 @@ public class CustomScannerActivity extends Activity implements DecoratedBarcodeV
         capture.decode();
 
 
-        barcodeScannerView.setTorchOn();
+        barcodeScannerView.setTorchOn(); // 라이트 켜기
 
     }
 
