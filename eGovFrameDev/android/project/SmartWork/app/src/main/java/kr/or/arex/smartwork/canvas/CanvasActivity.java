@@ -12,6 +12,7 @@ import android.graphics.Path;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Base64;
+import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -34,36 +35,31 @@ public class CanvasActivity extends Activity {
     NexacroActivityExt nexaobj =  (NexacroActivityExt)NexacroActivity.getInstance();
 
     private static final String TAG = "StandardObject";
-    LinearLayout ll;
+    LinearLayout ll;// 여러 뷰를 합칠 컨테이너
     String base64;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_canvas);
+        //setContentView(R.layout.activity_canvas);// 2022.02.03 이거 안됨 지금은 바쁘니 나중에 바꿀것
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
-       ll = new LinearLayout(this); // 여러 뷰를 합칠 컨테이너
-//        LinearLayout ll = findViewById(R.id.linearLayout);
+        ll = new LinearLayout(this); // 여러 뷰를 합칠 컨테이너
+//      LinearLayout ll = findViewById(R.id.linearLayout);// 2022.02.03 이거 안됨 지금은 바쁘니 나중에 바꿀것
         ll.setOrientation(LinearLayout.VERTICAL);
-        ll.setVerticalGravity(1);
+        ll.setGravity(Gravity.BOTTOM);
 
         final Button button1 = new Button(this);
-        ll.addView(button1);
-        button1.setText("사인 저장");
-        button1.setTextSize(24);
+        button1.setText("서명 저장");
+        button1.setTextSize(25);
         button1.setPaintFlags(button1.getPaintFlags() | Paint.FAKE_BOLD_TEXT_FLAG);//글씨 볼드체
         button1.setBackgroundColor(Color.YELLOW);
-        //button1.setHeight(20);
-
+        button1.setHeight(100);
+        ll.addView(button1);
 
         button1.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
-
-                //button1.setVisibility(View.VISIBLE);
-                //v.setVisibility(View.VISIBLE);
                 ll.removeView(button1);
 
                 final String imagename = UUID.randomUUID().toString() + ".png";
@@ -73,7 +69,7 @@ public class CanvasActivity extends Activity {
                 ll.buildDrawingCache();
                 Bitmap bitmap = Bitmap.createBitmap(ll.getDrawingCache());
 
-                bitmap = resizeBitmapImg(bitmap, 400);//2021.11.25 maxResolution 조정
+                bitmap = resizeBitmapImg(bitmap, 300);//2021.11.25 maxResolution 조정
 
                 v.buildDrawingCache();
                 try{
@@ -103,30 +99,22 @@ public class CanvasActivity extends Activity {
 
                     //setResult(99, intent1);
                     nexaobj.onActivityResult(50001, 99, intent1);
-
                     //IntentResult result = IntentIntegrator.parseActivityResult(0, 0, intent);
-
-
                     if( bos != null){
                         bos.close();
                     }
-
                 }catch (Exception e){
                     e.printStackTrace();
                 }
                 finish();
             }
-
         });
 
         MyView m = new MyView(CanvasActivity.this);
 
         ll.addView(m); // 리니어레이아웃에 포함시킴
         setContentView(ll);
-
     }
-
-
 
     class MyView extends View {
         Paint paint = new Paint();

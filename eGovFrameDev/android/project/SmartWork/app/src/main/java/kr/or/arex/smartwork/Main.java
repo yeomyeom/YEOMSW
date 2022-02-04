@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.Toast;
 
@@ -43,7 +44,11 @@ public class Main extends NexacroUpdatorActivity
 
     public boolean isNetworkConnected() {
         ConnectivityManager cm = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
-        return cm.getActiveNetworkInfo() != null;
+        try {
+            return cm.getActiveNetworkInfo() != null;
+        }catch(Exception e){
+            return false;
+        }
     }
 
     @Override
