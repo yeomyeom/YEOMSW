@@ -24,7 +24,7 @@ public class CustomScannerActivity extends Activity implements DecoratedBarcodeV
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom_scanner);
 
-        switchFlashlightButtonCheck = true;
+        switchFlashlightButtonCheck = false;
 
         backPressCloseHandler = new BackPressCloseHandler(this);
 
@@ -47,7 +47,7 @@ public class CustomScannerActivity extends Activity implements DecoratedBarcodeV
         capture.decode();
 
 
-        barcodeScannerView.setTorchOn(); // 라이트 켜기
+        //barcodeScannerView.setTorchOn(); // 라이트 켜기
 
     }
 

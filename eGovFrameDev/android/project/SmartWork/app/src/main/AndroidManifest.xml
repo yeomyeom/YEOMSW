@@ -82,18 +82,23 @@
         <intent-filter>
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
-    </activity>
+        </activity>
 
         <activity android:name="kr.or.arex.smartwork.qrcode.AnyOrientationCaptureActivity"
             android:screenOrientation="landscape"
             android:stateNotNeeded="true"
             android:theme="@style/zxing_CaptureTheme"
-            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+            android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+
         <activity
             android:name="kr.or.arex.smartwork.qrcode.CustomScannerActivity"
-            android:screenOrientation="landscape"></activity>
+            android:screenOrientation="landscape">
+        </activity>
 
-        <activity android:name="kr.or.arex.smartwork.canvas.CanvasActivity" />
+        <activity android:name="kr.or.arex.smartwork.canvas.CanvasActivity"
+            android:screenOrientation="landscape">
+        </activity>
 
 <!--        <receiver android:name="com.nexacro.deviceAPI.SmsRecv">
             <intent-filter>

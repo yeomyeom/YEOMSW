@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.Toast;
 
@@ -72,7 +71,7 @@ public class Main extends NexacroUpdatorActivity
             else{
                 try{
                     Thread.sleep(2000);
-                    toast = Toast.makeText(this, "2022-01-25에 업데이트 된 버전입니다.", Toast.LENGTH_LONG);
+                    toast = Toast.makeText(this, "2022-02-10에 업데이트 된 버전입니다.", Toast.LENGTH_LONG);
                     toast.show();
                 }catch (InterruptedException e) {
                     e.printStackTrace();
@@ -92,7 +91,6 @@ public class Main extends NexacroUpdatorActivity
         super.onCreate(savedInstanceState);
     }
 
-    //!!
     @Override
     public void setContentView(View view)
     {
@@ -154,7 +152,7 @@ public class Main extends NexacroUpdatorActivity
             }
         }
 
-        public boolean isSuccess(){
+        private boolean isSuccess(){
             return success;
         }
 

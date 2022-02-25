@@ -60,4 +60,10 @@
     <string name="execute_frameworkscript">Execute Framework Script</string>
     <string name="load_application">Load Application</string>
     <string name="load_failapplication">Load Fail Aplication Initialize. Click And Close</string>
+
+    <!-- Custom by 염승윤 -->
+    <string name="button_sketch">서명 입력</string>
+
+
+
 </resources>

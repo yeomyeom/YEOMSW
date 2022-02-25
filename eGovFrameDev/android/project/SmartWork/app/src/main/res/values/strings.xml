@@ -79,4 +79,7 @@
     <string name="not_connected">You are not connected to a device</string>
     <string name="warn_timeout">Connection is not available.\nData sending is cancelled.</string>
 
+    <!-- Custom by 염승윤 -->
+    <string name="button_sketch">서명 입력</string>
+
 </resources>

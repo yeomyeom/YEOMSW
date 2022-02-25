@@ -126,11 +126,11 @@
         {
             "adaptors":
             [
-
+          
             ]
         },
         "resource" :
-       {
+        {
             "android" : {
                 "updateurl" : "http://sw.arex.or.kr/angs/",
                 "default" : {
@@ -138,7 +138,7 @@
                     "default" : {
                         "updateurl" : "",
                         "resources" :
-                        [{"type" : "File", "file" : "Archive00.xzip", "targetpath" : "", "version" : "8", "failpass" : "false"},
+                        [{"type" : "File", "file" : "Archive00.xzip", "targetpath" : "", "version" : "10", "failpass" : "false"},
                          {"type" : "Theme", "file" : "angs.zip", "targetpath" : "/+theme_", "version" : "3", "failpass" : "false"},
                          {"type" : "Engine", "file" : "nexacro14lib.zip", "targetpath" : "", "version" : "9", "failpass" : ""}]
                     }

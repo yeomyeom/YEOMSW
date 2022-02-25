@@ -1,5 +1,6 @@
 package kr.or.arex.smartwork.canvas;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -45,16 +46,18 @@ public class CanvasActivity extends Activity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
         ll = new LinearLayout(this); // 여러 뷰를 합칠 컨테이너
-//      LinearLayout ll = findViewById(R.id.linearLayout);// 2022.02.03 이거 안됨 지금은 바쁘니 나중에 바꿀것
+//        LinearLayout ll = findViewById(R.id.linearLayout);// 2022.02.03 이거 안됨 지금은 바쁘니 나중에 바꿀것
         ll.setOrientation(LinearLayout.VERTICAL);
         ll.setGravity(Gravity.BOTTOM);
 
         final Button button1 = new Button(this);
         button1.setText("서명 저장");
         button1.setTextSize(25);
+        button1.setHeight(100);
         button1.setPaintFlags(button1.getPaintFlags() | Paint.FAKE_BOLD_TEXT_FLAG);//글씨 볼드체
         button1.setBackgroundColor(Color.YELLOW);
-        button1.setHeight(100);
+
+
         ll.addView(button1);
 
         button1.setOnClickListener(new View.OnClickListener() {
