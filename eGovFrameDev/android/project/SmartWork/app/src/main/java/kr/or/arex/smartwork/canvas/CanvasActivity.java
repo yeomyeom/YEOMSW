@@ -1,6 +1,5 @@
 package kr.or.arex.smartwork.canvas;
 
-import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
