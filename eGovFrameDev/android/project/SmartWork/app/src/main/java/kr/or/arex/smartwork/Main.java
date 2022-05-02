@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.view.View;
 import android.widget.Toast;
 
@@ -15,11 +16,12 @@ import java.net.URL;
 public class Main extends NexacroUpdatorActivity
 {
 
-    private Toast toast;
-//  private String arexUrl = "http://192.168.43.57:8080/angs/";     // local
-//      private String arexUrl = "http://192.168.42.15:8080/angs/";     // local
-//    private String arexUrl = "http://192.168.65.11:8037/angs/";   // dev
+//  private String arexUrl = "http://192.168.43.57:8080/angs/";   // local
+//  private String arexUrl = "http://192.168.42.15:8080/angs/";   // local
+//  private String arexUrl = "http://192.168.65.11:8037/angs/";   // dev
     private String arexUrl = "http://sw.arex.or.kr/angs/";        // 운영
+
+    private PermissionChk permission;
 
     public Main()
     {
@@ -30,8 +32,8 @@ public class Main extends NexacroUpdatorActivity
         setProjectURL(arexUrl);
 
         // 개발서버
- //       setBootstrapURL("http://192.168.65.11:8037/angs/start_android.json");
-  //      setProjectURL("http://192.168.65.11:8037/angs/");
+        //setBootstrapURL("http://192.168.65.11:8037/angs/start_android.json");
+        //setProjectURL("http://192.168.65.11:8037/angs/");
 
         // 통합테스트
         //setBootstrapURL("http://sw.arex.or.kr/angs/start_android.json");
@@ -54,6 +56,7 @@ public class Main extends NexacroUpdatorActivity
     protected void onCreate(Bundle savedInstanceState)
     {
 
+        Toast toast;
         if(!isNetworkConnected()){
             toast = Toast.makeText(this, "네트워크에 연결되어 있지 않습니다.\n네트워크 환경을 확인해주세요.", Toast.LENGTH_LONG);
             toast.show();
@@ -79,15 +82,20 @@ public class Main extends NexacroUpdatorActivity
             }
         }
 
+        permission = new PermissionChk(this, this);
+        if(permission.chkPerm()){
+            toast = Toast.makeText(this, "권한 확인", Toast.LENGTH_LONG);
+            toast.show();
+            permission.reqPerm();
+        }
+        // 권한확인 끝난것과 상관없이 진행
         Intent intent = getIntent();
         if (intent != null) {
             String url = intent.getStringExtra("updateUrl");
             if (url != null) {
                 setBootstrapURL(url);
             }
-
         }
-
         super.onCreate(savedInstanceState);
     }
 
@@ -114,7 +122,7 @@ public class Main extends NexacroUpdatorActivity
         private boolean success;
         private String host;
 
-        public CheckConnect(String host){
+        CheckConnect(String host){
             this.host = host;
         }
 
@@ -136,11 +144,7 @@ public class Main extends NexacroUpdatorActivity
                 System.out.println("####################################");
 
 
-                if(responseCode == 204 || responseCode == 200) {
-                    success = true;
-                }else{
-                    success = false;
-                }
+                success = responseCode == 204 || responseCode == 200;
 
             }
             catch (Exception e) {
@@ -156,6 +160,16 @@ public class Main extends NexacroUpdatorActivity
             return success;
         }
 
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int reqCode, @NonNull String[] perm, @NonNull int[] grantReslt) {
+        //여기서도 리턴이 false로 들어온다면 (사용자가 권한 허용 거부)
+        if (!permission.resPerm(reqCode, perm, grantReslt)) {
+            // 다시 permission 요청
+            permission.reqPerm();
+        }
+        super.onRequestPermissionsResult(reqCode, perm, grantReslt);
     }
 
 
